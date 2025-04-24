@@ -44,7 +44,7 @@ class SinglyLinkedList {
         Node next;
     }
 
-    Node head = null;
+    Node head = null; 
     Scanner sc = new Scanner(System.in);
 
     public void menu() {
@@ -154,10 +154,15 @@ class DoublyLinkedList {
     void delete() {
         if (head == null) {
             System.out.println("List is empty");
-        } else {
+        } 
+        else 
+        {
             System.out.println("Deleted: " + head.data);
             head = head.next;
-            if (head != null) head.prev = null;
+            if (head != null) 
+            {
+            	head.prev = null;
+            }
         }
     }
 
@@ -213,14 +218,21 @@ class CircularLinkedList {
         int val = sc.nextInt();
         Node newNode = new Node();
         newNode.data = val;
-        if (head == null) {
+        if (head == null) 
+        {
             head = newNode;
             newNode.next = head;
-        } else {
+        } 
+        else 
+        {
             Node temp = head;
-            while (temp.next != head) temp = temp.next;
+            while (temp.next != head) 
+            {
+            	temp = temp.next;
+            }
             temp.next = newNode;
             newNode.next = head;
+            
         }
     }
 
